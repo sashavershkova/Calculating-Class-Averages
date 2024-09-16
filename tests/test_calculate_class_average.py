@@ -2,7 +2,6 @@ import pytest
 from main import calculate_class_averages
 # Test cases
 def test_class_averages_for_multiple_students_and_classes():
-    """Test if the function correctly calculates averages for multiple students across different classes."""
     school_scores = {
         "Math": {
             "Alice": [85, 90, 78],
@@ -30,7 +29,6 @@ def test_class_averages_for_multiple_students_and_classes():
     assert result == expected, f"Expected {expected}, but got {result}"
 
 def test_class_with_no_students_should_return_zero_average():
-    """Test if a class with no students returns an average of 0."""
     school_scores = {
         "Math": {},
         "Science": {
@@ -48,7 +46,6 @@ def test_class_with_no_students_should_return_zero_average():
     assert result == expected, f"Expected {expected}, but got {result}"
 
 def test_single_student_single_class():
-    """Test if a class with a single student calculates the correct average."""
     school_scores = {
         "Math": {
             "Alice": [100, 95, 98]
@@ -63,7 +60,6 @@ def test_single_student_single_class():
     assert result == expected, f"Expected {expected}, but got {result}"
 
 def test_class_with_all_empty_score_lists_should_return_zero_average():
-    """Test if a class where all students have empty score lists returns an average of 0."""
     school_scores = {
         "Math": {
             "Alice": [],
@@ -79,7 +75,6 @@ def test_class_with_all_empty_score_lists_should_return_zero_average():
     assert result == expected, f"Expected {expected}, but got {result}"
 
 def test_mixed_scores_across_students_and_classes():
-    """Test if the function correctly handles a mix of scores across different students and classes."""
     school_scores = {
         "Math": {
             "Alice": [85, 90, 78],
