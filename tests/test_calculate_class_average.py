@@ -57,10 +57,6 @@ def test_single_student_single_class():
     for class_name, expected_avg in expected.items():
         assert isclose(result[class_name], expected_avg, rel_tol=1e-2)
 
-    result = calculate_class_averages(school_scores)
-    for class_name, expected_avg in expected.items():
-        assert isclose(result[class_name], expected_avg, rel_tol=1e-2)
-
 def test_mixed_scores_across_students_and_classes():
     school_scores = {
         "Math": {
